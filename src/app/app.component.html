@@ -1,0 +1,12 @@
+
+<mat-select [(value)]="selected" (selectionChange)="changeComponent()">
+  <mat-label>Shown Component</mat-label>
+  <mat-option *ngFor="let item of list" [value]="item">{{ item }}</mat-option>
+</mat-select>
+
+<!-- This is the name of our controlling directive. The
+one that holds the viewContainerRef that we'll use to show
+our changed components -->
+<div>
+  <ng-template appTest></ng-template>
+</div>
